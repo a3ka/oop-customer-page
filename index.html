@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <div class="wrapper">
+      
+
+
+      <div class="main">
+        
+        <h1 class="title">ORDER FORM</h1>
+      
+        <!-- FORM 1 -->
+        <div class="form">
+          <h3>NAME:</h3>
+          <div class="field">
+            <div>
+              <label for="fname1">First name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" id="fname1" name="fname1" placeholder="Enter your first name" />
+            </div>
+            <p class="errorMsg" id="fname1ErrorMsg"></p>
+          </div>
+
+          <div class="field">
+            <div>
+              <label for="lname1">Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="text" id="lname1" name="lname1" placeholder="Enter your last name" /> 
+            </div>
+            <p class="errorMsg" id="lname1ErrorMsg"></p>
+          </div>
+        </div>
+
+        <!-- FORM 2 -->
+        <div class="form">
+          <h3>Payment:</h3>
+          <div class="flx-row"> 
+            <p>Type of card:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <select id = "dropdownCard"
+                    name = "dropdownCard">
+              <option value = "Visa" selected>Visa</option>
+              <option value = "MasterCard">MasterCard</option>
+            </select>
+          </div>
+              <div> <h1> </h1> </div>
+
+          <div class="creditCardData">
+            <div class="field flx-column">
+              <label for="cardNumber">Card Number:</label>
+              <input type="cardNumber" id="cardNumber" name="cardNumber" maxlength="16" size="16" placeholder="Enter your Card Number" />
+              <p class="errorMsg__creditCard" id="cardNumberErrorMsg"></p>
+            </div>
+
+            <div class="field flx-column">
+              <label for="cvv">CVV:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <input type="cvv" id="cvv" name="cvv" maxlength="3" size="3" placeholder="Enter CVV" />
+              <p class="errorMsg__cvv" id="cvvErrorMsg"></p>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="container">
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
+        </div>
+      </div>                   
+
+      <div class="selected-date main field form">
+        <h3>DELIVERY DATE:</h3>
+        <p></p>
+      </div>
+
+      <div class="buttonSubmit main field form">
+        <button type="submit" class="full">Submit</button>
+      </div>
+
+    </div> 
+
+    
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

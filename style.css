@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  ;
+  
+  width: 100%;
+  height: 100vh;
+  background-color: #12121f;
+  justify-content: space-around; 
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #eee;
+}
+
+.calendar {
+  width: 45rem;
+  height: 39rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+  width: 100%;
+  height: 7rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #167e56;
+}
+
+
+/* OTHER  */
+/* MAIN */
+.main{
+  margin: 15px 10px 10px 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main h1 {
+  font-size: 4rem;
+  /* font-weight: 400; */
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.form {
+  background: rgb(255, 255, 255, 0.9);
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  border-top: 5px solid #0e3721;
+}
+
+.order-comment{
+  width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.errorMsg {
+  text-transform: lowercase;
+  color: red;
+  margin-left: 160px;
+  /* text-align: center; */
+  font-style: italic;
+}
+
+.errorMsg__creditCard {
+  text-transform: lowercase;
+  color: red;
+  margin-left: 15px;
+  /* text-align: center; */
+  font-style: italic;
+}
+
+.errorMsg__cvv {
+  text-transform: lowercase;
+  color: red;
+  margin-right: 15px;
+  /* text-align: center; */
+  font-style: italic;
+}
+
+.errorMsg__createAcc {
+  text-transform: lowercase;
+  color: red;
+  margin-left: 190px;
+  /* text-align: center; */
+  font-style: italic;
+}
+
+.main label {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.main h3 {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.main h4 {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.main p {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+#cardNumber{
+  margin-left: 10px;
+}
+
+#cvv{
+  margin-right: 10px;
+}
+
+.title{
+  text-align: center;
+}
+
+.flx-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.deliveryDate-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.deliveryDay {
+  margin-right: 25px;
+}
+
+.deliveryMonth {
+  margin-right: 25px;
+}
+
+.creditCardData{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttonSubmit{
+  padding: 5px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center; 
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  background: #167e56;
+  padding: 12px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(73, 6, 112);
+  transition: all .4s ease-in-out;
+}
+
+.selected-date{
+  height: 80px;
+}

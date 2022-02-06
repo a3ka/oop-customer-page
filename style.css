@@ -292,3 +292,25 @@ button:hover {
 .selected-date{
   height: 80px;
 }
+
+.delivery-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+._flx {
+  display: flex;
+  flex-direction: row;
+}
+
+.payment__discount h4 {
+  /* margin-left: 80px; */
+  color: brown;
+}

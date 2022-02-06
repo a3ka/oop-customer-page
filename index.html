@@ -20,7 +20,7 @@
       
 
 
-      <div class="main">
+      <div class="main" >
         
         <h1 class="title">ORDER FORM</h1>
       
@@ -96,12 +96,28 @@
         </div>
       </div>                   
 
-      <div class="selected-date main field form">
+      <div class="main field form">
         <h3>DELIVERY DATE:</h3>
-        <p></p>
+        <div class="delivery-date" id="selected-date"> </div>
       </div>
 
-      <div class="buttonSubmit main field form">
+      <div class="main field form">
+        <!-- <h3>PAYMENT</h3> -->
+        <div class="payment" id="payment"> 
+          <div class="payment__sum _flx" > 
+            <h4> Total Price: </h4>
+            <h4 id="payment__sum">0$</h4>
+          </div> 
+
+          <div class="payment__discount _flx" > 
+            <h4 id="payment__discount">   </h4>
+            <h4 id="payment__discount2"></h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="buttonSubmit main field form" id="signup">
         <button type="submit" class="full">Submit</button>
       </div>
 

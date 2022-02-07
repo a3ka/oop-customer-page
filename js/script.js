@@ -1,17 +1,17 @@
 const date = new Date();
 const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
   ];
 
 const renderCalendar = () => {
@@ -81,9 +81,6 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
-// days.addEventListener("click", () => {
-//   console.log("1");
-// })
 const monthDays = document.querySelector(".days");
 const choosedDates = document.querySelector(".choosed-dates");
 
@@ -97,28 +94,22 @@ monthDays.addEventListener("click", (event)=>{
 
 
 const deliveryDateSelector = () => {
-  let pId = event.target.id + " " + months[date.getMonth()]; 
-  let tag = document.createElement("p");
+  const pId = event.target.id + " " + months[date.getMonth()]; 
+  const tag = document.createElement("p");
   tag.id = pId;
-  let text = document.createTextNode(pId + " ");
+  const text = document.createTextNode(pId + " ");
   tag.appendChild(text);
-  let element = document.getElementById("selected-date");
-  element.appendChild(tag);
-
-  // let theDiv = document.getElementById("selected-date").children;
-  // for (let item of theDiv) {
-  //   index = index + 1;
-  //     if (pId === item.id) {
-  //       element.parentNode.removeChild(pId);
-  //       // element.parentNode.removeChild(tag.id);
-  //       console.log("WE MUST DELETE IT");
-  //     } 
-  //   }
+  const element = document.getElementById("selected-date");
+  
+  //DELETE ITEM 
+  if(document.getElementById(pId) == null){
+    element.appendChild(tag);
+  } else {
+    document.getElementById(pId).remove();
+  }
 
   // CHANGE PAYMENT SUM AND DISCOUNT
-  console.log(element.children.length);
-
-  let pieceQuantities = element.children.length; 
+  const pieceQuantities = element.children.length; 
   if (pieceQuantities == 1) {
     document.getElementById('payment__sum').innerText = itemPrice * pieceQuantities + " $";
   } else if (pieceQuantities > 1) {
@@ -130,7 +121,6 @@ const deliveryDateSelector = () => {
     document.getElementById('payment__discount').innerText = "";
   } 
 } 
-
 
 // SAVE ALL DATA IN THE OBJECTS WITH ITS OWN PROPERTIES AND METHODS
 const form = document.getElementById('signup');
@@ -150,7 +140,6 @@ form.addEventListener("click", function (event) {
     cvv: document.getElementById('cvv').value, 
     discount: document.getElementById('payment__discount2').textContent
   }
-
 
   const dDates = [];
 
@@ -182,12 +171,7 @@ form.addEventListener("click", function (event) {
     }
   }
 
-  
-
   order.getName();
   order.getBillingInfo();
   order.getDeliveryDates();
-  
 });
-
-

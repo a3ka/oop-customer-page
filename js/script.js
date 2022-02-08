@@ -95,14 +95,14 @@ monthDays.addEventListener("click", (event)=>{
 
 const deliveryDateSelector = () => {
   const pId = event.target.id + " " + months[date.getMonth()]; 
-  const tag = document.createElement("p");
-  tag.id = pId;
-  const text = document.createTextNode(pId + " ");
-  tag.appendChild(text);
   const element = document.getElementById("selected-date");
   
   //DELETE ITEM 
   if(document.getElementById(pId) == null){
+    const tag = document.createElement("p");
+    tag.id = pId;
+    const text = document.createTextNode(pId + " ");
+    tag.appendChild(text);
     element.appendChild(tag);
   } else {
     document.getElementById(pId).remove();
